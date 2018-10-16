@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<tables>
+    <table id="sheet1" database="test" tableName="t_order" primaryKey="auto">
+        <describe>订单表</describe>
+        <columns>
+            <column>
+                <columnName>orderId</columnName>
+                <columnType>string</columnType>
+                <columnSize>20</columnSize>
+                <columnDesc>订单号</columnDesc>
+            </column>
+            <column>
+                <columnName>count</columnName>
+                <columnType>int</columnType>
+                <columnSize>10</columnSize>
+                <columnDesc>票数</columnDesc>
+            </column>
+            <column>
+                <columnName>showDate</columnName>
+                <columnType>string</columnType>
+                <columnSize>20</columnSize>
+                <columnDesc>上映日期</columnDesc>
+            </column>
+            <!--......-->
+        </columns>
+    </table>
+</tables>

@@ -1,0 +1,30 @@
+server:
+  name: auto-demo
+  host: '127.0.0.1'
+  port: 8088
+  version: 1.0.1
+excelService:
+  excelFilePath: 'resources/订单数据.xlsx'  #excel文件路径
+  mapperXML: 'resources/mapper.xml'        #映射文件路径
+  sheetName: 'Sheet1' #excel sheet名字
+  hasTitle: true      #是否包含标题
+  maxProcessNum: 100  #每次执行多少条sql,测试可以少一点，也可以调整到 5000
+  limit: -1           #当limit为-1时，导入全部,测试用可以少一点，我测试用5
+  create: true        #当表不存在是，是否自动创建
+  truncate: true      #重试是否清理数据
+  dbSourceRef: local  #引用哪一个数据源，与dbconfigs[0].name匹配
+dbconfigs:
+   # 数据源配置信息
+   - name: local
+     config:
+      switch: true     #mysql开关
+      mode: false       #是否打印sql debug日志
+      driver: mysql
+      host: 127.0.0.1  #数据库地址
+      port: 3306       #数据库端口号
+      username: root   #数据库用户名
+      password: 123456 #数据库密码
+      databasename: db_dingzuo #数据库名字
+      lifetime: 10
+      max-open-num: 5
+      max-idle-num: 5
