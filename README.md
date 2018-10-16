@@ -77,4 +77,4 @@ dbconfigs:
 > ./auto
 
 #### windows
->start ./main.ext 或者双击运行
+>start ./main.exe 或者双击运行
